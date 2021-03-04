@@ -1,0 +1,14 @@
+[Unit]
+Description=Proyecto gusanero en GUNICORN
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/home/sparrow/Documents/Proyectos/Flask
+Environment="PATH=/home/sparrow/Documents/Proyectos/Flask/env/bin"
+ExecStart=/home/sparrow/Documents/Proyectos/Flask/env/bin/gunicorn
+
+[Install]
+WantedBy=multi-user.target
+
